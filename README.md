@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NSE Technology</title>
+<meta name="description" content="NSE Technology ระบบ Network, CCTV, Solar Cell, ระบบไฟฟ้า และสัญญาณกันขโมย">
+
+<style>
+:root{
+  --bg:#020617;
+  --ink:#e5e7eb;
+  --muted:#94a3b8;
+  --brand:#38bdf8;
+  --accent:#22c55e;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,Segoe UI,Tahoma,sans-serif;
+  background:radial-gradient(1200px 600px at 80% -10%,#1f2937 0%,#0b1224 60%,#020617 100%);
+  color:var(--ink);
+}
+
+/* ===== Header ===== */
+header{
+  background:linear-gradient(135deg,#020617,#0369a1);
+  text-align:center;
+  padding:48px 20px;
+}
+.logo{width:130px;margin-bottom:14px}
+nav{margin-top:20px}
+nav a{
+  color:var(--brand);
+  margin:0 14px;
+  text-decoration:none;
+  font-weight:600;
+}
+nav a:hover{color:#7dd3fc}
+
+/* ===== Banner ===== */
+.banner{
+  position:relative;
+  height:420px;
+  overflow:hidden;
+}
+.banner img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(.55);
+}
+.banner-text{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+.banner-text h2{
+  font-size:clamp(30px,4vw,48px);
+  margin:0;
+  background:linear-gradient(90deg,#38bdf8,#22c55e);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.banner-text p{color:#e5e7eb;margin-top:12px}
+
+/* ===== Section ===== */
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:80px 20px;
+}
+section h2{text-align:center;margin-bottom:18px}
+
+/* ===== Stats ===== */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:30px;
+  text-align:center;
+}
+.stats h3{
+  font-size:44px;
+  margin:0;
+  color:var(--brand);
+}
+.stats p{color:#cbd5f5}
+
+/* ===== SERVICES : PREMIUM TILE ===== */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+  margin-top:50px;
+}
+
+.card{
+  position:relative;
+  padding:36px 32px;
+  border-radius:22px;
+  background:linear-gradient(180deg,#0c1426,#0a1122);
+  border:1px solid #22304a;
+  box-shadow:0 25px 60px rgba(0,0,0,.55);
+  overflow:hidden;
+  transition:.45s cubic-bezier(.2,.8,.2,1);
+}
+.card::before{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  background:linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(56,189,248,.35),
+    rgba(34,197,94,.35),
+    transparent 70%
+  );
+  opacity:0;
+  transition:.45s;
+}
+.card:hover{
+  transform:translateY(-12px) scale(1.04);
+  box-shadow:0 45px 90px rgba(14,165,233,.45);
+}
+.card:hover::before{opacity:1}
+
+.card .icon{
+  width:64px;
+  height:64px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#38bdf8,#22c55e);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  color:#020617;
+  margin-bottom:22px;
+  box-shadow:0 14px 36px rgba(56,189,248,.6);
+}
+.card h3{
+  margin:0 0 12px;
+  font-size:1.35rem;
+  background:linear-gradient(90deg,#e5e7eb,#c7d2fe);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.card p{
+  color:#b6c2e2;
+  font-size:.95rem;
+  line-height:1.75;
+}
+.card span{
+  display:inline-block;
+  margin-top:22px;
+  font-size:.8rem;
+  letter-spacing:.14em;
+  color:#7dd3fc;
+}
+
+/* ===== Contact ===== */
+.contact-btns{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.contact-btns a{
+  padding:14px 26px;
+  border-radius:30px;
+  font-weight:700;
+  text-decoration:none;
+  color:#020617;
+}
+.btn-call{background:#34d399}
+.btn-line{background:#22c55e}
+.btn-fb{background:#38bdf8}
+
+/* ===== Footer ===== */
+footer{
+  background:#020617;
+  text-align:center;
+  padding:26px;
+  color:var(--muted);
+  border-top:1px solid #23324a;
+}
+.counter{text-align:center;color:var(--muted);margin:16px 0}
+
+@media(max-width:768px){
+  .banner{height:280px}
+   :root{
+      --bg:#0f172a;        /* slate-900 */
+      --card:#111827cc;    /* slate-900/80 */
+      --ink:#e5e7eb;       /* gray-200 */
+      --muted:#94a3b8;     /* slate-400 */
+      --brand:#38bdf8;     /* sky-400 */
+      --accent:#a78bfa;    /* violet-400 */
+      --good:#34d399;      /* emerald-400 */
+      --warn:#fbbf24;      /* amber-400 */
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Noto Sans Thai, "Noto Sans", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--ink); background: radial-gradient(1200px 600px at 80% -10%, #1f2937 0%, #0b1224 50%, #070b16 100%), var(--bg);
+      line-height:1.6;
+    }
+    header{ position:sticky; top:0; backdrop-filter: blur(10px); background: #0b1224cc; border-bottom:1px solid #243045; z-index:20 }
+    .container{ width:min(1120px, 92%); margin:0 auto }
+    nav{ display:flex; align-items:center; justify-content:space-between; padding:12px 0 }
+    .logo{ display:flex; align-items:center; gap:10px; font-weight:700 }
+    .logo-dot{ width:10px; height:10px; border-radius:50%; background:linear-gradient(135deg, var(--brand), var(--accent)); box-shadow:0 0 18px 4px #38bdf866 }
+    .nav-links{ display:flex; gap:18px }
+    .nav-links a{ color:var(--muted); text-decoration:none; font-weight:600 }
+    .nav-links a:hover{ color:var(--ink) }
+
+    .hero{ display:grid; grid-template-columns:1.2fr 0.8fr; gap:28px; align-items:center; padding:64px 0 }
+    .hero h1{ font-size:clamp(28px, 5vw, 48px); line-height:1.1; margin:0 0 10px }
+    .hero p{ color:var(--muted); margin:0 0 24px }
+    .badge{ display:inline-flex; gap:8px; align-items:center; padding:6px 10px; border:1px solid #23324a; border-radius:999px; color:#cbd5e1; background:#0f172acc }
+    .btn{ display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:14px; border:1px solid #23324a; background:linear-gradient(180deg, #0f1a2e, #0b1224); color:var(--ink); text-decoration:none; font-weight:700 }
+    .btn:hover{ border-color:#2b3a57; transform:translateY(-1px) }
+    .btn.primary{ background:linear-gradient(135deg, var(--brand), var(--accent)); color:#0b1224; border:none }
+
+    .card{ background: linear-gradient(180deg, #0c1426, #0a1122); border:1px solid #22304a; border-radius:18px; padding:18px; box-shadow: 0 10px 30px #00000055 }
+    .sparkle{ color:transparent; background:linear-gradient(90deg, #fff, #d1d5db); -webkit-background-clip:text; background-clip:text }
+
+    .features{ display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; padding:20px 0 60px }
+    .feature h3{ margin:8px 0 }
+    .feature p{ color:var(--muted); margin:0 }
+
+    .cta{ display:grid; grid-template-columns:1fr 1fr; gap:18px; padding:40px 0 80px; align-items:stretch }
+    .list li{ margin:10px 0; color:#cbd5e1 }
+
+    .form{ display:grid; gap:12px }
+    .form label{ font-weight:700 }
+    .input, textarea{ width:100%; padding:12px 14px; border-radius:12px; border:1px solid #22304a; background:#0b1224; color:var(--ink) }
+    textarea{ min-height:120px }
+
+    footer{ border-top:1px solid #23324a; color:#a3aed0; padding:22px 0 40px; font-size:14px }
+
+    @media (max-width: 900px){
+      .hero{ grid-template-columns:1fr; text-align:center }
+      .cta{ grid-template-columns:1fr }
+      .features{ grid-template-columns:1fr; }
+      nav{ flex-wrap:wrap; gap:10px }
+      .nav-links{ width:100%; justify-content:center }
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.jpg" class="logo">
+  <h1>NSE Technology</h1>
+  <p>ผู้ให้บริการงานระบบเทคโนโลยีครบวงจร จังหวัดตราด</p>
+  <nav>
+    <a href="#home">หน้าแรก</a>
+    <a href="#services">บริการ</a>
+    <a href="#contact">ติดต่อ</a>
+    <a href="#map">แผนที่</a>
+  </nav>
+</header>
+
+<div class="banner">
+  <img id="bannerImg" src="banner1.jpg" alt="NSE Technology Banner">
+  <div class="banner-text">
+    <h2>Professional Technology Solution</h2>
+    <p>Network • CCTV • Solar • Electrical • Security</p>
+  </div>
+</div>
+
+
+<section id="home">
+  <h2>ยินดีต้อนรับ</h2>
+  <p style="text-align:center">ออกแบบ ติดตั้ง และดูแลระบบโดยทีมงานมืออาชีพ</p>
+  <div class="stats">
+    <div><h3>10+</h3><p>ปีประสบการณ์</p></div>
+    <div><h3>300+</h3><p>ผลงานติดตั้ง</p></div>
+    <div><h3>100%</h3><p>ความพึงพอใจ</p></div>
+  </div>
+</section>
+
+<section id="services">
+  <h2>บริการของเรา</h2>
+  <p style="text-align:center;color:#cbd5f5;max-width:720px;margin:auto">
+    บริการระบบเทคโนโลยีครบวงจร โดยทีมงานมืออาชีพในจังหวัดตราด
+  </p>
+
+  <div class="services">
+    <div class="card">
+      <div class="icon">🌐</div>
+      <h3>ระบบ Network</h3>
+      <p>LAN / WAN / WiFi สำหรับบ้านและองค์กร</p>
+      <span>PROFESSIONAL NETWORK</span>
+    </div>
+
+    <div class="card">
+      <div class="icon">📷</div>
+      <h3>ระบบ CCTV</h3>
+      <p>กล้องความละเอียดสูง ดูผ่านมือถือ 24 ชม.</p>
+      <span>SECURITY MONITORING</span>
+    </div>
+
+    <div class="card">
+      <div class="icon">☀️</div>
+      <h3>Solar Cell</h3>
+      <p>ลดค่าไฟ พร้อมบริการหลังการขาย</p>
+      <span>CLEAN ENERGY</span>
+    </div>
+
+    <div class="card">
+      <div class="icon">⚡</div>
+      <h3>ระบบไฟฟ้า</h3>
+      <p>อาคารและโรงงาน ตามมาตรฐานความปลอดภัย</p>
+      <span>ELECTRICAL SYSTEM</span>
+    </div>
+
+    <div class="card">
+      <div class="icon">🚨</div>
+      <h3>สัญญาณกันขโมย</h3>
+      <p>แจ้งเตือนการบุกรุก เพิ่มความอุ่นใจ</p>
+      <span>ALARM & SAFETY</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>ติดต่อเรา</h2>
+  <p style="text-align:center">
+    414/9 ม.12 ต.วังกระแจะ อ.เมืองตราด จ.ตราด
+  </p>
+  <div class="contact-btns">
+    <a href="tel:080-6444664" class="btn-call">📞 โทร</a>
+    <a href="https://line.me/ti/p/@nsetechnology" class="btn-line">💬 LINE</a>
+    <a href="https://web.facebook.com/profile.php?id=100086729328270" class="btn-fb">📘 Facebook</a>
+  </div>
+</section>
+
+<section id="map">
+  <h2>แผนที่บริษัท</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3899.0204378268822!2d102.52304457578839!3d12.246895330350974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310443826b8f0f79%3A0x875e1e4995c331c7!2sNSE%20Technology!5e0!3m2!1sth!2sth!4v1767444849567!5m2!1sth!2sth"
+    width="100%" height="400" style="border:0;border-radius:16px"></iframe>
+</section>
+
+<div class="counter">
+  👁 ผู้เข้าชมเว็บไซต์: <span id="counter">0</span>
+</div>
+
+<footer>© 2026 NSE Technology</footer>
+
+<script>
+const banners=["banner1.jpg","banner2.jpg","banner3.jpg"];
+let i=0;
+setInterval(()=>{
+  i=(i+1)%banners.length;
+  bannerImg.src=banners[i];
+},4000);
+
+let views=localStorage.getItem("nse_views");
+views=views?++views:1;
+localStorage.setItem("nse_views",views);
+counter.textContent=views;
+</script>
+
+</body>
+</html>
