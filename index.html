@@ -301,13 +301,14 @@ footer{
 </a>
 
 
-    <div class="card">
-      <a href="network1.html" class="card"></a>
-    <div class="icon">📷</div>
-    <h3>ระบบ CCTV</h3>
-    <p>กล้องความละเอียดสูง ดูผ่านมือถือ 24 ชม.</p>
-    <span>SECURITY MONITORING</span>
-    </div>
+  <div class="card">
+    <a href="network1.html" class="card">
+  <div class="icon">📷</div>
+  <h3>ระบบ CCTV</h3>
+  <p>กล้องความละเอียดสูง ดูผ่านมือถือ 24 ชม.</p>
+  <span>SECURITY MONITORING</span>
+</a>
+
 
     <div class="card">
       <div class="icon">☀️</div>
