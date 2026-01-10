@@ -1,3 +1,4 @@
+/* ===== ROOT THEME ===== */
 :root{
   --bg:#0f172a;
   --ink:#e5e7eb;
@@ -6,75 +7,280 @@
   --accent:#22c55e;
 }
 
+/* ===== RESET ===== */
 *{box-sizing:border-box}
-html,body{height:100%}
+html,body{margin:0;padding:0}
 
+/* ===== BODY ===== */
 body{
-  margin:0;
   font-family:system-ui,Segoe UI,Tahoma,sans-serif;
+  background:radial-gradient(
+    1200px 600px at 80% -10%,
+    #1e293b 0%,
+    #0f172a 55%,
+    #020617 100%
+  );
   color:var(--ink);
-  background:
-    radial-gradient(1200px 600px at 80% -10%,
-    #1f2937 0%, #0b1224 60%, #020617 100%);
+  line-height:1.6;
 }
 
-/* ===== Header ===== */
+/* ===== HEADER ===== */
 header{
-  background:linear-gradient(135deg,#020617,#0369a1);
+  background:linear-gradient(135deg,#020617,#0ea5e9);
   text-align:center;
   padding:48px 20px;
 }
+.logo{
+  width:130px;
+  margin-bottom:14px;
+}
+header h1{margin:0}
+header p{color:#cbd5f5}
 
-/* ===== Banner ===== */
-.banner{height:420px;position:relative;overflow:hidden}
-.banner img{width:100%;height:100%;object-fit:cover;filter:brightness(.55)}
+nav{margin-top:20px}
+nav a{
+  color:var(--brand);
+  margin:0 14px;
+  text-decoration:none;
+  font-weight:600;
+}
+nav a:hover{color:#7dd3fc}
 
-/* ===== Sections ===== */
-section{max-width:1100px;margin:auto;padding:80px 20px}
+/* ===== BANNER ===== */
+.banner{
+  position:relative;
+  height:420px;
+  overflow:hidden;
+}
+.banner img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(.7) contrast(1.1);
+}
+.banner-text{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+.banner-text h2{
+  font-size:clamp(30px,4vw,48px);
+  margin:0;
+  background:linear-gradient(90deg,#38bdf8,#22c55e);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.banner-text p{
+  color:#e5e7eb;
+  margin-top:12px;
+}
 
-/* ===== Services Premium ===== */
+/* ===== SECTION ===== */
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:80px 20px;
+}
+section h2{
+  text-align:center;
+  margin-bottom:18px;
+}
+
+/* ===== STATS ===== */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:30px;
+  text-align:center;
+}
+.stats h3{
+  font-size:44px;
+  margin:0;
+  background:linear-gradient(90deg,#38bdf8,#22c55e);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.stats p{color:#cbd5f5}
+
+/* ===== SERVICES (PREMIUM) ===== */
 .services{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:28px;
+  gap:32px;
   margin-top:50px;
 }
 
 .card{
   position:relative;
-  padding:36px 32px;
-  border-radius:22px;
-  background:linear-gradient(180deg,#0c1426,#0a1122);
-  border:1px solid #22304a;
-  box-shadow:0 25px 60px rgba(0,0,0,.55);
+  padding:38px 30px;
+  border-radius:26px;
+  background:linear-gradient(180deg,#111c36,#0b1630);
+  border:1px solid #2b3a57;
+  box-shadow:
+    0 0 0 1px rgba(148,163,184,.12),
+    0 30px 80px rgba(2,132,199,.28);
+  overflow:hidden;
+  transition:.45s cubic-bezier(.21,.6,.35,1);
+}
+
+.card::after{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  border-radius:26px;
+  background:linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(56,189,248,.9),
+    rgba(34,211,238,.8),
+    transparent 70%
+  );
+  opacity:.25;
+  pointer-events:none;
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(
+    600px 200px at 120% -20%,
+    rgba(56,189,248,.35),
+    transparent 55%
+  );
+  opacity:0;
   transition:.45s;
 }
 
 .card:hover{
-  transform:translateY(-12px) scale(1.04);
-  box-shadow:0 45px 90px rgba(14,165,233,.45);
+  transform:translateY(-14px) scale(1.035);
+  box-shadow:
+    0 0 0 1px rgba(56,189,248,.45),
+    0 50px 120px rgba(14,165,233,.55);
 }
+.card:hover::before{opacity:1}
 
+/* ===== ICON ===== */
 .card .icon{
-  width:64px;height:64px;
-  border-radius:18px;
-  background:linear-gradient(135deg,#38bdf8,#22c55e);
-  display:flex;align-items:center;justify-content:center;
-  font-size:30px;color:#020617;
+  width:64px;
+  height:64px;
+  border-radius:22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
   margin-bottom:22px;
+  background:linear-gradient(135deg,#38bdf8,#22c55e);
+  color:#020617;
+  box-shadow:
+    0 10px 25px rgba(56,189,248,.7),
+    inset 0 0 0 1px rgba(255,255,255,.25);
 }
 
+/* ===== CARD TEXT ===== */
 .card h3{
   margin:0 0 12px;
-  background:linear-gradient(90deg,#e5e7eb,#c7d2fe);
+  font-size:1.35rem;
+  font-weight:700;
+  background:linear-gradient(90deg,#e0f2fe,#bae6fd);
   -webkit-background-clip:text;
   color:transparent;
 }
+.card p{
+  color:#c7d2fe;
+  font-size:.96rem;
+  line-height:1.75;
+}
+.card span{
+  display:inline-block;
+  margin-top:20px;
+  font-size:.8rem;
+  letter-spacing:1px;
+  padding:6px 14px;
+  border-radius:999px;
+  color:#7dd3fc;
+  border:1px solid rgba(56,189,248,.35);
+  background:rgba(2,132,199,.15);
+}
 
-.card p{color:#b6c2e2}
-.card span{color:#7dd3fc;font-size:.8rem;letter-spacing:.14em}
+/* ===== CONTACT ===== */
+.contact-btns{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.contact-btns a{
+  padding:14px 26px;
+  border-radius:30px;
+  font-weight:700;
+  text-decoration:none;
+  color:#020617;
+}
+.btn-call{background:#34d399}
+.btn-line{background:#22c55e}
+.btn-fb{background:#38bdf8}
 
-/* ===== Mobile ===== */
+/* ===== COUNTER ===== */
+.counter{
+  text-align:center;
+  color:var(--muted);
+  margin:16px 0;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#020617;
+  text-align:center;
+  padding:26px;
+  color:#94a3b8;
+  border-top:1px solid #23324a;
+}
+
+/* ===== RESPONSIVE ===== */
 @media(max-width:768px){
   .banner{height:280px}
+}
+
+/* ===== FIX <a class="card"> ===== */
+.services a.card{
+  display:block;
+  color:inherit;
+  text-decoration:none;
+  position:relative;
+  z-index:1;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ให้คลิกได้ทั้งการ์ด */
+.services a.card *{
+  pointer-events:none;
+}
+
+/* ไม่ให้ glow ทับตัวอักษร */
+.card::before,
+.card::after{
+  z-index:-1;
+}
+
+/* Hover smooth */
+.services a.card:hover{
+  transform:translateY(-14px) scale(1.04);
+  box-shadow:
+    0 0 0 1px rgba(56,189,248,.45),
+    0 50px 120px rgba(14,165,233,.6);
+}
+
+/* มือถือไม่เด้ง */
+@media (hover:none){
+  .services a.card:hover{
+    transform:none;
+    box-shadow:
+      0 0 0 1px rgba(56,189,248,.35),
+      0 25px 60px rgba(14,165,233,.35);
+  }
 }
