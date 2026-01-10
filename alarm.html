@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>ระบบกันขโมย | NSE Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+  margin:0;
+  font-family:system-ui;
+  background:#020617;
+  color:#e5e7eb;
+}
+header{
+  padding:30px;
+  background:linear-gradient(135deg,#020617,#7c2d12);
+  text-align:center;
+}
+section{
+  max-width:1000px;
+  margin:auto;
+  padding:60px 20px;
+}
+h2{color:#fb7185}
+
+.video{
+  width:100%;
+  aspect-ratio:16/9;
+  border-radius:16px;
+  overflow:hidden;
+  margin:30px 0;
+}
+.video video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  margin-top:30px;
+}
+.gallery img{
+  width:100%;
+  border-radius:16px;
+  object-fit:cover;
+  box-shadow:0 10px 30px #00000088;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:40px;
+  padding:14px 30px;
+  background:#fb7185;
+  color:#020617;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:700;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>ระบบกันขโมย (Alarm System)</h1>
+  <p>NSE Technology</p>
+</header>
+
+<section>
+  <h2>ปกป้องทรัพย์สินตลอด 24 ชั่วโมง</h2>
+  <p>
+    ติดตั้งระบบกันขโมย เซนเซอร์ประตู หน้าต่าง Motion Sensor ไซเรน  
+    แจ้งเตือนผ่านมือถือ เชื่อมต่อ CCTV และ Smart Home
+  </p>
+
+  <!-- วิดีโอ -->
+  <div class="video">
+    <video autoplay muted loop controls>
+      <source src="alarm.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <h2>ผลงานติดตั้งระบบกันขโมย</h2>
+
+  <!-- รูปผลงาน -->
+  <div class="gallery">
+    <img src="alarm1.jpg">
+    <img src="alarm2.jpg">
+    <img src="alarm3.jpg">
+    <img src="alarm4.jpg">
+  </div>
+
+  <a href="index.html#services" class="btn">← กลับหน้าบริการ</a>
+</section>
+
+</body>
+</html>
