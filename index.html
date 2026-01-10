@@ -292,44 +292,45 @@ footer{
     บริการระบบเทคโนโลยีครบวงจร โดยทีมงานมืออาชีพในจังหวัดตราด
   </p>
 
-  <div class="services">
-    <a href="network.html" class="card">
-  <div class="icon">🌐</div>
-  <h3>ระบบ Network</h3>
-  <p>LAN / WAN / WiFi สำหรับบ้านและองค์กร</p>
-  <span>PROFESSIONAL NETWORK</span>
-</a>
+<div class="services">
 
-  <div class="card">
-    <a href="network1.html" class="card">
-  <div class="icon">📷</div>
-  <h3>ระบบ CCTV</h3>
-  <p>กล้องความละเอียดสูง ดูผ่านมือถือ 24 ชม.</p>
-  <span>SECURITY MONITORING</span>
-</a>
+  <a href="network.html" class="card">
+    <div class="icon">🌐</div>
+    <h3>ระบบ Network</h3>
+    <p>LAN / WAN / WiFi สำหรับบ้านและองค์กร</p>
+    <span>PROFESSIONAL NETWORK</span>
+  </a>
 
-    <div class="card">
-      <div class="icon">☀️</div>
-      <h3>Solar Cell</h3>
-      <p>ลดค่าไฟ พร้อมบริการหลังการขาย</p>
-      <span>CLEAN ENERGY</span>
-    </div>
+  <a href="network1.html" class="card">
+    <div class="icon">📷</div>
+    <h3>ระบบ CCTV</h3>
+    <p>กล้องความละเอียดสูง ดูผ่านมือถือ 24 ชม.</p>
+    <span>SECURITY MONITORING</span>
+  </a>
 
-    <div class="card">
-      <div class="icon">⚡</div>
-      <h3>ระบบไฟฟ้า</h3>
-      <p>อาคารและโรงงาน ตามมาตรฐานความปลอดภัย</p>
-      <span>ELECTRICAL SYSTEM</span>
-    </div>
+  <a href="solar.html" class="card">
+    <div class="icon">☀️</div>
+    <h3>Solar Cell</h3>
+    <p>ลดค่าไฟ พร้อมบริการหลังการขาย</p>
+    <span>CLEAN ENERGY</span>
+  </a>
 
-    <div class="card">
-      <div class="icon">🚨</div>
-      <h3>สัญญาณกันขโมย</h3>
-      <p>แจ้งเตือนการบุกรุก เพิ่มความอุ่นใจ</p>
-      <span>ALARM & SAFETY</span>
-    </div>
-  </div>
-</section>
+  <a href="electric.html" class="card">
+    <div class="icon">⚡</div>
+    <h3>ระบบไฟฟ้า</h3>
+    <p>อาคารและโรงงาน ตามมาตรฐานความปลอดภัย</p>
+    <span>ELECTRICAL SYSTEM</span>
+  </a>
+
+  <a href="alarm.html" class="card">
+    <div class="icon">🚨</div>
+    <h3>สัญญาณกันขโมย</h3>
+    <p>แจ้งเตือนการบุกรุก เพิ่มความอุ่นใจ</p>
+    <span>ALARM & SAFETY</span>
+  </a>
+
+</div>
+
 
 <section id="contact">
   <h2>ติดต่อเรา</h2>
