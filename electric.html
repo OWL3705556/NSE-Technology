@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>ระบบไฟฟ้า | NSE Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+  margin:0;
+  font-family:system-ui;
+  background:#020617;
+  color:#e5e7eb;
+}
+header{
+  padding:30px;
+  background:linear-gradient(135deg,#020617,#f59e0b);
+  text-align:center;
+}
+section{
+  max-width:1000px;
+  margin:auto;
+  padding:60px 20px;
+}
+h2{color:#facc15}
+
+.video{
+  width:100%;
+  aspect-ratio:16/9;
+  border-radius:16px;
+  overflow:hidden;
+  margin:30px 0;
+}
+.video video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  margin-top:30px;
+}
+.gallery img{
+  width:100%;
+  border-radius:16px;
+  object-fit:cover;
+  box-shadow:0 10px 30px #00000088;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:40px;
+  padding:14px 30px;
+  background:#facc15;
+  color:#020617;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:700;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>ระบบไฟฟ้า</h1>
+  <p>NSE Technology</p>
+</header>
+
+<section>
+  <h2>งานระบบไฟฟ้ามาตรฐานวิศวกรรม</h2>
+  <p>
+    บริการออกแบบและติดตั้งระบบไฟฟ้า อาคาร บ้าน โรงงาน และสำนักงาน  
+    ครอบคลุม MDB, ตู้ไฟ, เดินสาย, ระบบกราวด์ และไฟฟ้าแสงสว่าง
+  </p>
+
+  <!-- วิดีโอ -->
+  <div class="video">
+    <video autoplay muted loop controls>
+      <source src="electric.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <h2>ผลงานติดตั้งระบบไฟฟ้า</h2>
+
+  <!-- รูปผลงาน -->
+  <div class="gallery">
+    <img src="electric1.jpg">
+    <img src="electric2.jpg">
+    <img src="electric3.jpg">
+    <img src="electric4.jpg">
+  </div>
+
+  <a href="index.html#services" class="btn">← กลับหน้าบริการ</a>
+</section>
+
+</body>
+</html>
